@@ -1,0 +1,11 @@
+[package]
+name = "peer-node-subsystem"
+description = "Subsystem traits and message definitions and the generated overseer"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+peer-overseer = { path = "../overseer" }
+peer-node-subsystem-types = { path = "../subsystem-types" }
+peer-node-jaeger = { path = "../jaeger" }

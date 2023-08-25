@@ -1,0 +1,31 @@
+[package]
+name = "peer-approval-distribution"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+peer-node-primitives = { path = "../../primitives" }
+peer-node-network-protocol = { path = "../protocol" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-primitives = { path = "../../../primitives" }
+rand = "0.8"
+
+futures = "0.3.21"
+gum = { package = "tracing-gum", path = "../../gum" }
+
+[dev-dependencies]
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
+
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+peer-primitives-test-helpers = { path = "../../../primitives/test-helpers" }
+
+assert_matches = "1.4.0"
+schnorrkel = { version = "0.9.1", default-features = false }
+rand_core = "0.5.1" # should match schnorrkel
+rand_chacha = "0.3.1"
+env_logger = "0.9.0"
+log = "0.4.17"

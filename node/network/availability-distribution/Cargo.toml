@@ -1,0 +1,33 @@
+[package]
+name = "peer-availability-distribution"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+gum = { package = "tracing-gum", path = "../../gum" }
+parity-scale-codec = { version = "3.1.5", features = ["std"] }
+peer-primitives = { path = "../../../primitives" }
+peer-erasure-coding = { path = "../../../erasure-coding" }
+peer-node-network-protocol = { path = "../../network/protocol" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-node-primitives = { path = "../../primitives" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+thiserror = "1.0.31"
+rand = "0.8.5"
+derive_more = "0.99.17"
+lru = "0.8.0"
+fatality = "0.0.6"
+
+[dev-dependencies]
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures-timer = "3.0.2"
+assert_matches = "1.4.0"
+peer-primitives-test-helpers = { path = "../../../primitives/test-helpers" }

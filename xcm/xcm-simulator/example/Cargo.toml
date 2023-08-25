@@ -1,0 +1,27 @@
+[package]
+name = "xcm-simulator-example"
+description = "Examples of xcm-simulator usage."
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.0.0" }
+scale-info = { version = "2.1.2", features = ["derive"] }
+
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+xcm = { path = "../../" }
+xcm-simulator = { path = "../" }
+xcm-executor = { path = "../../xcm-executor" }
+xcm-builder = { path = "../../xcm-builder" }
+pallet-xcm = { path = "../../pallet-xcm" }
+peer-core-primitives = { path = "../../../core-primitives" }
+Peer-Runtime-parachains = { path = "../../../runtime/parachains" }
+peer-parachain = { path = "../../../parachain" }

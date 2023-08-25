@@ -1,0 +1,24 @@
+[package]
+name = "peer-performance-test"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+thiserror = "1.0.31"
+quote = "1.0.20"
+env_logger = "0.9"
+log = "0.4"
+
+peer-node-core-pvf = { path = "../../core/pvf" }
+peer-erasure-coding = { path = "../../../erasure-coding" }
+peer-node-primitives = { path = "../../primitives" }
+
+Peer-Runtime = { path = "../../../runtime/peer" }
+
+[[bin]]
+name = "gen-ref-constants"
+path = "src/gen_ref_constants.rs"
+
+[features]
+runtime-benchmarks = ["Peer-Runtime/runtime-benchmarks"]

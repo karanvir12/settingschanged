@@ -1,0 +1,52 @@
+[package]
+name = "peer-primitives"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+bitvec = { version = "1.0.0", default-features = false, features = ["alloc"] }
+hex-literal = "0.3.4"
+parity-scale-codec = { version = "3.1.5", default-features = false, features = ["bit-vec", "derive"] }
+scale-info = { version = "2.1.2", default-features = false, features = ["bit-vec", "derive"] }
+serde = { version = "1.0.137", optional = true, features = ["derive"] }
+
+application-crypto = { package = "sp-application-crypto", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+inherents = { package = "sp-inherents", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+primitives = { package = "sp-core", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+runtime_primitives = { package = "sp-runtime", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-arithmetic = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-consensus-slots = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+sp-staking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-std = { package = "sp-std", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+peer-core-primitives = { path = "../core-primitives", default-features = false }
+peer-parachain = { path = "../parachain", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+	"application-crypto/std",
+	"parity-scale-codec/std",
+	"scale-info/std",
+	"primitives/std",
+	"inherents/std",
+	"sp-api/std",
+	"sp-authority-discovery/std",
+	"sp-consensus-slots/std",
+	"sp-keystore",
+	"sp-std/std",
+	"sp-io/std",
+	"sp-staking/std",
+	"sp-arithmetic/std",
+	"runtime_primitives/std",
+	"serde",
+	"peer-parachain/std",
+	"peer-core-primitives/std",
+	"bitvec/std",
+]
+runtime-benchmarks = []

@@ -1,0 +1,22 @@
+{% import "high_priority.md.tera" as m_p -%}
+## Upgrade Priority
+
+{%- set peer_prio = 0 -%}
+{%- set substrate_prio = 0 -%}
+
+{# We fetch the various priorities #}
+{%- if peer.meta.C -%}
+    {%- set peer_prio = peer.meta.C.max -%}
+{%- endif -%}
+{%- if substrate.meta.C -%}
+    {%- set substrate_prio = substrate.meta.C.max -%}
+{%- endif -%}
+
+{# We compute the global priority #}
+{%- set global_prio = peer_prio -%}
+{%- if substrate_prio > global_prio -%}
+    {%- set global_prio = substrate_prio -%}
+{%- endif -%}
+
+{#- We show the result #}
+{{ m_p::high_priority(p=global_prio, changes=changes) }}

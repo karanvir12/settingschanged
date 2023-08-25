@@ -1,0 +1,31 @@
+[package]
+name = "peer-node-core-candidate-validation"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+async-trait = "0.1.57"
+futures = "0.3.21"
+futures-timer = "3.0.2"
+gum = { package = "tracing-gum", path = "../../gum" }
+
+sp-maybe-compressed-blob = { package = "sp-maybe-compressed-blob", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+parity-scale-codec = { version = "3.1.5", default-features = false, features = ["bit-vec", "derive"] }
+
+peer-primitives = { path = "../../../primitives" }
+peer-parachain = { path = "../../../parachain" }
+peer-node-primitives = { path = "../../primitives" }
+peer-node-subsystem = {path = "../../subsystem" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+
+[target.'cfg(not(any(target_os = "android", target_os = "unknown")))'.dependencies]
+peer-node-core-pvf = { path = "../pvf" }
+
+[dev-dependencies]
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = { version = "0.3.21", features = ["thread-pool"] }
+assert_matches = "1.4.0"
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }

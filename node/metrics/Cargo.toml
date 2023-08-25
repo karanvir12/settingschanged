@@ -1,0 +1,42 @@
+[package]
+name = "peer-node-metrics"
+description = "Subsystem metric helpers"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+futures-timer = "3.0.2"
+gum = { package = "tracing-gum", path = "../gum" }
+
+metered = { package = "prioritized-metered-channel", version = "0.2.0" }
+
+# Both `sc-service` and `sc-cli` are required by runtime metrics `logger_hook()`.
+sc-service = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+substrate-prometheus-endpoint = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+codec = { package = "parity-scale-codec", version = "3.0.0" }
+primitives = { package = "peer-primitives", path = "../../primitives/" }
+bs58 = { version = "0.4.0", features = ["alloc"] }
+log = "0.4.17"
+
+[dev-dependencies]
+assert_cmd = "2.0.4"
+nix = "0.24.1"
+tempfile = "3.2.0"
+hyper = { version = "0.14.20", default-features = false, features = ["http1", "tcp"] }
+tokio = "1.22.0"
+peer-test-service = { path = "../test/service", features=["runtime-metrics"]}
+substrate-test-utils = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-service = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-client-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+prometheus-parse = {version = "0.2.2"}
+
+[features]
+default = []
+runtime-metrics = []
+runtime-benchmarks = []

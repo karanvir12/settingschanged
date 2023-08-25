@@ -1,0 +1,221 @@
+[package]
+name = "peer-service"
+rust-version = "1.60"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+# Substrate Client
+sc-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+babe = { package = "sc-consensus-babe", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+beefy-primitives = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , package="sp-beefy",branch = "mainnet-peer" }
+beefy-gadget = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+grandpa = { package = "sc-finality-grandpa", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+mmr-gadget = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-mmr-primitives = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-block-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-chain-spec = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-client-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-client-db = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-slots = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-executor = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network-common = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network-sync = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-transaction-pool = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-sync-state-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-basic-authorship = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-offchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-sysinfo = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+service = { package = "sc-service", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+telemetry = { package = "sc-telemetry", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+# Substrate Primitives
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-authorship = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+consensus_common = { package = "sp-consensus", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+grandpa_primitives = { package = "sp-finality-grandpa", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+inherents = { package = "sp-inherents", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-block-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-offchain = { package = "sp-offchain", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-session = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-storage = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-transaction-pool = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-trie = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-timestamp = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-state-machine = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+# Substrate Pallets
+pallet-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-im-online = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-staking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-transaction-payment-rpc-runtime-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+# Substrate Other
+frame-system-rpc-runtime-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+prometheus-endpoint = { package = "substrate-prometheus-endpoint", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+# External Crates
+futures = "0.3.21"
+hex-literal = "0.3.4"
+gum = { package = "tracing-gum", path = "../gum/" }
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = "1.0.81"
+thiserror = "1.0.31"
+kvdb = "0.13.0"
+kvdb-rocksdb = { version = "0.17.0", optional = true }
+parity-db = { version = "0.4.2", optional = true }
+
+async-trait = "0.1.57"
+lru = "0.8"
+
+# peer
+peer-node-core-parachains-inherent = { path = "../core/parachains-inherent" }
+peer-overseer = { path = "../overseer" }
+peer-client = { path = "../client", default-features = false, optional = true }
+peer-parachain = { path = "../../parachain" }
+peer-primitives = { path = "../../primitives" }
+peer-node-primitives = { path = "../primitives" }
+peer-rpc = { path = "../../rpc" }
+peer-node-subsystem = {path = "../subsystem" }
+peer-node-subsystem-util = { path = "../subsystem-util" }
+peer-node-subsystem-types = { path = "../subsystem-types" }
+Peer-Runtime-parachains = { path = "../../runtime/parachains" }
+peer-node-network-protocol = { path = "../network/protocol" }
+
+# peer Runtime Constants
+Peer_Runtime_constants = { path = "../../runtime/peer/constants", optional = true }
+
+# peer Runtimes
+Peer-Runtime = { path = "../../runtime/peer", optional = true }
+
+# peer Subsystems
+peer-approval-distribution = { path = "../network/approval-distribution", optional = true }
+peer-availability-bitfield-distribution = { path = "../network/bitfield-distribution", optional = true }
+peer-availability-distribution = { path = "../network/availability-distribution", optional = true }
+peer-availability-recovery = { path = "../network/availability-recovery", optional = true }
+peer-collator-protocol = { path = "../network/collator-protocol", optional = true }
+peer-dispute-distribution = { path = "../network/dispute-distribution", optional = true }
+peer-gossip-support = { path = "../network/gossip-support", optional = true }
+peer-network-bridge = { path = "../network/bridge", optional = true }
+peer-node-collation-generation = { path = "../collation-generation", optional = true }
+peer-node-core-approval-voting = { path = "../core/approval-voting", optional = true }
+peer-node-core-av-store = { path = "../core/av-store", optional = true }
+peer-node-core-backing = { path = "../core/backing", optional = true }
+peer-node-core-bitfield-signing = { path = "../core/bitfield-signing", optional = true }
+peer-node-core-candidate-validation = { path = "../core/candidate-validation", optional = true }
+peer-node-core-chain-api = { path = "../core/chain-api", optional = true }
+peer-node-core-chain-selection = { path = "../core/chain-selection", optional = true }
+peer-node-core-dispute-coordinator = { path = "../core/dispute-coordinator", optional = true }
+peer-node-core-provisioner = { path = "../core/provisioner", optional = true }
+peer-node-core-pvf-checker = { path = "../core/pvf-checker", optional = true }
+peer-node-core-runtime-api = { path = "../core/runtime-api", optional = true }
+peer-statement-distribution = { path = "../network/statement-distribution", optional = true }
+
+# RPC
+jsonrpsee = { version = "0.16.2", features = ["server"] }
+sc-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-babe-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-epochs = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-finality-grandpa-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+txpool-api = { package = "sc-transaction-pool-api", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-rpc-system = { package = "substrate-frame-rpc-system", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+mmr-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+beefy-gadget-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+substrate-state-trie-migration-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-transaction-payment-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+# Peer-Runtime = { version = "3.0.0-dev", path = "../runtime/peer" }
+
+# Frontier
+fc-cli = { path = "../../evm-client/cli" }
+fc-consensus = { path = "../../evm-client/consensus" }
+fc-db = { path = "../../evm-client/db" }
+fc-mapping-sync = { path = "../../evm-client/mapping-sync" }
+fc-rpc = { path = "../../evm-client/rpc" }
+fc-rpc-core = { path = "../../evm-client/rpc-core" }
+fp-consensus = { path = "../../evm-primitives/consensus" }
+fp-dynamic-fee = { path = "../../evm-primitives/dynamic-fee" }
+fp-evm = { path = "../../evm-primitives/evm" }
+fp-rpc = { path = "../../evm-primitives/rpc" }
+fp-storage = { path = "../../evm-primitives/storage" }
+pallet-evm = {path = "../../evm-frame/evm"}
+pallet-ethereum = {path = "../../evm-frame/ethereum"}
+
+[dev-dependencies]
+peer-test-client = { path = "../test/client" }
+peer-node-subsystem-test-helpers = { path = "../subsystem-test-helpers" }
+env_logger = "0.9.0"
+log = "0.4.17"
+assert_matches = "1.5.0"
+tempfile = "3.2"
+
+[features]
+default = ["db", "full-node", "peer-native"]
+
+db = [
+	"service/rocksdb"
+]
+
+full-node = [
+	"peer-node-core-av-store",
+	"peer-node-core-approval-voting",
+	"peer-availability-bitfield-distribution",
+	"peer-availability-distribution",
+	"peer-availability-recovery",
+	"peer-client",
+	"peer-collator-protocol",
+	"peer-dispute-distribution",
+	"peer-gossip-support",
+	"peer-network-bridge",
+	"peer-node-collation-generation",
+	"peer-node-core-backing",
+	"peer-node-core-bitfield-signing",
+	"peer-node-core-candidate-validation",
+	"peer-node-core-chain-api",
+	"peer-node-core-chain-selection",
+	"peer-node-core-dispute-coordinator",
+	"peer-node-core-provisioner",
+	"peer-node-core-runtime-api",
+	"peer-statement-distribution",
+	"peer-approval-distribution",
+	"peer-node-core-pvf-checker",
+	"kvdb-rocksdb",
+	"parity-db",
+]
+
+# Configure the native runtimes to use. peer is enabled by default.
+#
+# Validators require the native runtime currently
+peer-native = [ "Peer-Runtime", "Peer_Runtime_constants", "peer-client/peer" ]
+
+runtime-benchmarks = [
+	"Peer-Runtime?/runtime-benchmarks",
+
+	"service/runtime-benchmarks",
+]
+try-runtime = [
+	"Peer-Runtime?/try-runtime",
+]
+fast-runtime = [
+	"Peer-Runtime?/fast-runtime",
+]
+
+malus = ["full-node"]
+runtime-metrics = [
+	"peer-client/runtime-metrics",
+	"Peer-Runtime?/runtime-metrics",
+	"Peer-Runtime-parachains/runtime-metrics"
+]

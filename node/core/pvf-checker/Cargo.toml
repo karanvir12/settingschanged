@@ -1,0 +1,28 @@
+[package]
+name = "peer-node-core-pvf-checker"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+thiserror = "1.0.31"
+gum = { package = "tracing-gum", path = "../../gum" }
+
+peer-node-primitives = { path = "../../primitives" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-primitives = { path = "../../../primitives" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-overseer = { path = "../../overseer" }
+
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+[dev-dependencies]
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers"}
+test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }
+sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures-timer = "3.0.2"

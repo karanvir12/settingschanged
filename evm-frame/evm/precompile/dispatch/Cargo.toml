@@ -1,0 +1,40 @@
+[package]
+name = "pallet-evm-precompile-dispatch"
+version = "2.0.0-dev"
+license = "Apache-2.0"
+edition = "2021"
+description = "DISPATCH precompiles for EVM pallet."
+ 
+[dependencies]
+# Substrate
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false  }
+# Frontier
+fp-evm = { version = "3.0.0-dev", path = "../../../../evm-primitives/evm", default-features = false }
+pallet-evm = {  path = "../..", default-features = false }
+
+[dev-dependencies]
+scale-codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3.1", default-features = false, features = ["derive"] }
+# Substrate
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false  }
+pallet-timestamp = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+pallet-balances ={ git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+pallet-utility = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+
+[features]
+default = ["std"]
+std = [
+	# Substrate
+	"frame-support/std",
+	# Frontier
+	"fp-evm/std",
+	"pallet-evm/std",
+	"pallet-balances/std",
+	"pallet-utility/std"
+
+
+]

@@ -1,0 +1,20 @@
+[package]
+name = "xcm-simulator"
+description = "Test kit to simulate cross-chain message passing and XCM execution"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.0.0" }
+paste = "1.0.7"
+
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+xcm = { path = "../" }
+xcm-executor = { path = "../xcm-executor" }
+peer-core-primitives = { path = "../../core-primitives"}
+peer-parachain = { path = "../../parachain" }
+Peer-Runtime-parachains = { path = "../../runtime/parachains" }

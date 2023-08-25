@@ -1,0 +1,12 @@
+[package]
+name = "tracing-gum"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+description = "Stick logs together with the TraceID as provided by tempo"
+
+[dependencies]
+tracing = "0.1.35"
+jaeger = { path = "../jaeger", package = "peer-node-jaeger" }
+gum-proc-macro = { path = "./proc-macro", package = "tracing-gum-proc-macro" }
+peer-primitives = { path = "../../primitives", features = ["std"] }

@@ -1,0 +1,34 @@
+[package]
+name = "peer-gossip-support"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+peer-node-network-protocol = { path = "../protocol" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-primitives = { path = "../../../primitives" }
+
+futures = "0.3.21"
+futures-timer = "3.0.2"
+rand = { version = "0.8.5", default-features = false }
+rand_chacha = { version = "0.3.1", default-features = false }
+gum = { package = "tracing-gum", path = "../../gum" }
+
+[dev-dependencies]
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+
+assert_matches = "1.4.0"
+async-trait = "0.1.57"
+lazy_static = "1.4.0"

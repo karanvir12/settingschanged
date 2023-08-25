@@ -1,0 +1,27 @@
+[package]
+name = "peer-node-core-runtime-api"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+gum = { package = "tracing-gum", path = "../../gum" }
+lru = "0.8"
+
+sp-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+peer-primitives = { path = "../../../primitives" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-node-subsystem-types = { path = "../../subsystem-types" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+
+[dev-dependencies]
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = { version = "0.3.21", features = ["thread-pool"] }
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+peer-node-primitives = { path = "../../primitives" }
+test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }

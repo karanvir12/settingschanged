@@ -1,0 +1,5 @@
+
+= peer Statement table
+
+placeholder
+//TODO Write content :) (https://github.com/paritytech/peer/issues/159)

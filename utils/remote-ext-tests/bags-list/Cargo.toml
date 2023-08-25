@@ -1,0 +1,19 @@
+[package]
+name = "remote-ext-tests-bags-list"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+Peer-Runtime = { path = "../../../runtime/peer" }
+Peer_Runtime_constants = { path = "../../../runtime/peer/constants" }
+
+
+pallet-bags-list-remote-tests = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+clap = { version = "4.0.9", features = ["derive"] }
+log = "0.4.17"
+tokio = { version = "1.22.0", features = ["macros"] }

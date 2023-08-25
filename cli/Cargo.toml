@@ -1,0 +1,74 @@
+[package]
+name = "peer-cli"
+description = "Peer Relay-chain Client Node"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[package.metadata.wasm-pack.profile.release]
+# `wasm-opt` has some problems on Linux, see
+# https://github.com/rustwasm/wasm-pack/issues/781 etc.
+wasm-opt = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+clap = { version = "4.0.9", features = ["derive"], optional = true }
+log = "0.4.17"
+thiserror = "1.0.31"
+futures = "0.3.21"
+pyro = { package = "pyroscope", version = "0.3.1", optional = true }
+
+service = { package = "peer-service", path = "../node/service", default-features = false, optional = true }
+peer-client = { path = "../node/client", optional = true }
+peer-node-core-pvf = { path = "../node/core/pvf", optional = true }
+peer-performance-test = { path = "../node/test/performance-test", optional = true }
+
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer"}
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-benchmarking-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+try-runtime-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+sc-service = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+peer-node-metrics = { path = "../node/metrics" }
+sc-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+sc-sysinfo = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-executor = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+[build-dependencies]
+substrate-build-script-utils = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+[features]
+default = ["db", "cli", "hostperfcheck", "full-node", "peer-native"]
+db = ["service/db"]
+cli = [
+	"clap",
+	"sc-cli",
+	"sc-service",
+	"sc-tracing",
+	"frame-benchmarking-cli",
+	"try-runtime-cli",
+	"peer-client",
+	"peer-node-core-pvf",
+]
+runtime-benchmarks = [
+	"service/runtime-benchmarks",
+	"peer-node-metrics/runtime-benchmarks",
+	"peer-performance-test?/runtime-benchmarks"
+]
+full-node = ["service/full-node"]
+try-runtime = ["service/try-runtime", "try-runtime-cli/try-runtime"]
+fast-runtime = ["service/fast-runtime"]
+pyroscope = ["pyro"]
+hostperfcheck = ["peer-performance-test"]
+
+# Configure the native runtimes to use. Peer is enabled by default.
+#
+# Validators require the native runtime currently
+peer-native = ["service/peer-native"]
+
+
+malus = ["full-node", "service/malus"]
+runtime-metrics = ["service/runtime-metrics", "peer-node-metrics/runtime-metrics"]

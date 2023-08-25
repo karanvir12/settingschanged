@@ -1,0 +1,24 @@
+[package]
+name = "peer-node-subsystem-types"
+description = "Subsystem traits and message definitions"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+derive_more = "0.99.17"
+futures = "0.3.21"
+peer-primitives = { path = "../../primitives" }
+peer-node-primitives = { path = "../primitives" }
+peer-node-network-protocol = { path = "../network/protocol" }
+peer-statement-table = { path = "../../statement-table" }
+peer-node-jaeger = { path = "../jaeger" }
+orchestra = "0.0.2"
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+smallvec = "1.8.0"
+substrate-prometheus-endpoint = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+thiserror = "1.0.31"
+async-trait = "0.1.57"

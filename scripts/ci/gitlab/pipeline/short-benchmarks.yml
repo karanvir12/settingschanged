@@ -1,0 +1,23 @@
+# This file is part of .gitlab-ci.yml
+# Here are all jobs that are executed during "short-benchmarks" stage
+
+# Run all pallet benchmarks only once to check if there are any errors
+short-benchmark-peer:          &short-bench
+  stage:                           short-benchmarks
+  extends:
+    - .test-pr-refs
+    - .docker-env
+  # this is an artificial job dependency, for pipeline optimization using GitLab's DAGs
+  needs:
+    - job:                         build-short-benchmark
+      artifacts:                   true
+  variables:
+    RUNTIME:                       peer
+  script:
+    - ./artifacts/peer benchmark pallet --execution wasm --wasm-execution compiled --chain $RUNTIME-dev --pallet "*" --extrinsic "*" --steps 2 --repeat 1
+
+short-benchmark:
+  <<:                              *short-bench
+  variables:
+    RUNTIME:                      
+

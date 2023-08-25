@@ -1,0 +1,27 @@
+[package]
+name = "peer-node-network-protocol"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+description = "Primitives types for the Node-side"
+
+[dependencies]
+async-trait = "0.1.57"
+hex = "0.4.3"
+peer-primitives = { path = "../../../primitives" }
+peer-node-primitives = { path = "../../primitives" }
+peer-node-jaeger = { path = "../../jaeger" }
+parity-scale-codec = { version = "3.1.5", default-features = false, features = ["derive"] }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network-common = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+strum = { version = "0.24", features = ["derive"] }
+futures = "0.3.21"
+thiserror = "1.0.31"
+fatality = "0.0.6"
+rand = "0.8"
+derive_more = "0.99"
+gum = { package = "tracing-gum", path = "../../gum" }
+
+[dev-dependencies]
+rand_chacha = "0.3.1"

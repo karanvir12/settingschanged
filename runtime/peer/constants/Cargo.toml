@@ -1,0 +1,23 @@
+[package]
+name = "Peer_Runtime_constants"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+smallvec = "1.8.0"
+
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+primitives = { package = "peer-primitives", path = "../../../primitives", default-features = false }
+runtime-common = { package = "Peer-Runtime-common", path = "../../common", default-features = false }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-weights = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+[features]
+default = ["std"]
+std = [
+	"sp-core/std",
+	"sp-runtime/std",
+	"sp-weights/std"
+]

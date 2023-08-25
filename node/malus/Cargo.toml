@@ -1,0 +1,44 @@
+[package]
+name = "peer-test-malus"
+description = "Misbehaving nodes for local testnets, system and Simnet tests."
+license = "GPL-3.0-only"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+readme = "README.md"
+publish = false
+
+[[bin]]
+name = "malus"
+path = "src/malus.rs"
+
+[dependencies]
+peer-cli = { path = "../../cli", features = [ "malus",  "peer-native" ] }
+peer-node-subsystem = { path = "../subsystem" }
+peer-node-subsystem-util = { path = "../subsystem-util" }
+peer-node-subsystem-types = { path = "../subsystem-types" }
+peer-node-core-dispute-coordinator = { path = "../core/dispute-coordinator" }
+peer-node-core-candidate-validation = { path = "../core/candidate-validation" }
+peer-node-core-backing = { path = "../core/backing" }
+peer-node-primitives = { path = "../primitives" }
+peer-primitives = { path = "../../primitives" }
+peer-node-core-pvf = { path = "../core/pvf" }
+color-eyre = { version = "0.6.1", default-features = false }
+assert_matches = "1.5"
+async-trait = "0.1.57"
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+clap = { version = "4.0.9", features = ["derive"] }
+futures = "0.3.21"
+futures-timer = "3.0.2"
+gum = { package = "tracing-gum", path = "../gum/" }
+erasure = { package = "peer-erasure-coding", path = "../../erasure-coding" }
+rand = "0.8.5"
+
+[features]
+default = []
+
+[dev-dependencies]
+peer-node-subsystem-test-helpers = { path = "../subsystem-test-helpers" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = { version = "0.3.21", features = ["thread-pool"] }

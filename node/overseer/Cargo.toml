@@ -1,0 +1,36 @@
+[package]
+name = "peer-overseer"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+client = { package = "sc-client-api", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = "0.3.21"
+futures-timer = "3.0.2"
+parking_lot = "0.12.0"
+peer-node-network-protocol = { path = "../network/protocol" }
+peer-node-primitives = { path = "../primitives" }
+peer-node-subsystem-types = { path = "../subsystem-types" }
+peer-node-metrics = { path = "../metrics" }
+peer-primitives = { path = "../../primitives" }
+orchestra = "0.0.2"
+gum = { package = "tracing-gum", path = "../gum" }
+lru = "0.8"
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+async-trait = "0.1.57"
+tikv-jemalloc-ctl = "0.5.0"
+
+[dev-dependencies]
+metered = { package = "prioritized-metered-channel", version = "0.2.0" }
+
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = { version = "0.3.21", features = ["thread-pool"] }
+femme = "2.2.1"
+assert_matches = "1.4.0"
+test-helpers = { package = "peer-primitives-test-helpers", path = "../../primitives/test-helpers" }
+
+[features]
+default = []
+expand = ["orchestra/expand"]

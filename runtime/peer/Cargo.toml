@@ -1,0 +1,353 @@
+[package]
+name = "Peer-Runtime"
+build = "build.rs"
+version = "3.0.0-dev"
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+bitvec = { version = "1.0.0", default-features = false, features = ["alloc"] }
+parity-scale-codec = { version = "3.1.5", default-features = false, features = ["derive", "max-encoded-len"] }
+scale-info = { version = "2.1.2", default-features = false, features = ["derive"] }
+log = { version = "0.4.17", default-features = false }
+rustc-hex = { version = "2.1.0", default-features = false }
+serde = { version = "1.0.137", default-features = false }
+serde_derive = { version = "1.0.117", optional = true }
+static_assertions = "1.1.0"
+smallvec = "1.8.0"
+
+authority-discovery-primitives = { package = "sp-authority-discovery", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+babe-primitives = { package = "sp-consensus-babe", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+beefy-primitives = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false ,package="sp-beefy", branch = "mainnet-peer" }
+block-builder-api = { package = "sp-block-builder", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+inherents = { package = "sp-inherents", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+offchain-primitives = { package = "sp-offchain", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+tx-pool-api = { package = "sp-transaction-pool", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-mmr-primitives = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-staking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-session = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-version = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-npos-elections = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+pallet-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-authorship = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-bags-list = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-bounties = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-child-bounties = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-transaction-payment = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-transaction-payment-rpc-runtime-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-collective = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-democracy = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-elections-phragmen = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-election-provider-multi-phase = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-fast-unstake = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+frame-executive = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-grandpa = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-identity = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-im-online = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-indices = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-membership = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-multisig = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-nomination-pools = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-nomination-pools-runtime-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-offences = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-preimage = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-proxy = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-scheduler = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-session = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" ,features = ["tuples-96"] }
+pallet-staking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-staking-reward-curve = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-system = {git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+frame-system-rpc-runtime-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+Peer_Runtime_constants = { package = "Peer_Runtime_constants", path = "./constants", default-features = false }
+pallet-timestamp = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-tips = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-treasury = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-vesting = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-utility = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+frame-election-provider-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-xcm = { path = "../../xcm/pallet-xcm", default-features = false }
+
+pallet-contracts = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+pallet-randomness-collective-flip = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+pallet-contracts-primitives = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+
+frame-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+frame-try-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+frame-system-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+pallet-election-provider-support-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+pallet-offences-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+pallet-session-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+pallet-nomination-pools-benchmarking = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, optional = true , branch = "mainnet-peer" }
+hex-literal = { version = "0.3.4", optional = true }
+
+runtime-common = { package = "Peer-Runtime-common", path = "../common", default-features = false }
+runtime-parachains = { package = "Peer-Runtime-parachains", path = "../parachains", default-features = false }
+primitives = { package = "peer-primitives", path = "../../primitives", default-features = false }
+
+xcm = { package = "xcm", path = "../../xcm", default-features = false }
+xcm-executor = { package = "xcm-executor", path = "../../xcm/xcm-executor", default-features = false }
+xcm-builder = { package = "xcm-builder", path = "../../xcm/xcm-builder", default-features = false }
+
+
+# Frontier FRAME
+ pallet-base-fee = {version="1.0.0", path = "../../evm-frame/base-fee", default-features = false }
+ pallet-dynamic-fee = {version = "4.0.0-dev", path = "../../evm-frame/dynamic-fee", default-features = false }
+ pallet-ethereum = {version = "4.0.0-dev", path = "../../evm-frame/ethereum", default-features = false }
+pallet-evm = {  path = "../../evm-frame/evm", default-features = false }
+ pallet-evm-precompile-modexp = {version = "2.0.0-dev", path = "../../evm-frame/evm/precompile/modexp", default-features = false }
+pallet-evm-precompile-sha3fips = {version = "2.0.0-dev", path = "../../evm-frame/evm/precompile/sha3fips", default-features = false }
+ pallet-evm-precompile-simple = {version = "2.0.0-dev", path = "../../evm-frame/evm/precompile/simple", default-features = false }
+ pallet-hotfix-sufficients = {version = "1.0.0", path = "../../evm-frame/hotfix-sufficients", default-features = false }
+ pallet-evm-chain-id = { version = "1.0.0-dev", path = "../../evm-frame/evm-chain-id", default-features = false }
+
+ fp-rpc = {version="3.0.0-dev", path = "../../evm-primitives/rpc", default-features = false }
+ fp-self-contained = {version="1.0.0-dev", path = "../../evm-primitives/self-contained", default-features = false }
+
+pallet-sudo = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
+
+[dev-dependencies]
+hex-literal = "0.3.4"
+tiny-keccak = { version = "2.0.2", features = ["keccak"] }
+keyring = { package = "sp-keyring", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-trie = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+serde_json = "1.0.81"
+separator = "0.4.1"
+remote-externalities = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", package = "frame-remote-externalities" , branch = "mainnet-peer" }
+tokio = { version = "1.22.0", features = ["macros"] }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+
+
+# Frontier
+
+
+
+
+
+
+
+[build-dependencies]
+substrate-wasm-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+[features]
+default = ["std"]
+no_std = []
+only-staking = []
+std = [
+	"authority-discovery-primitives/std",
+	"bitvec/std",
+	"primitives/std",
+	"rustc-hex/std",
+	"parity-scale-codec/std",
+	"scale-info/std",
+	"inherents/std",
+	"sp-core/std",
+	"sp-api/std",
+	"pallet-sudo/std",
+	"tx-pool-api/std",
+	"block-builder-api/std",
+	"offchain-primitives/std",
+	"sp-std/std",
+	"sp-mmr-primitives/std",
+	"frame-support/std",
+	"frame-executive/std",
+	"pallet-authority-discovery/std",
+	"pallet-authorship/std",
+	"pallet-bags-list/std",
+	"pallet-balances/std",
+	"pallet-bounties/std",
+	"pallet-child-bounties/std",
+	"pallet-transaction-payment/std",
+	"pallet-transaction-payment-rpc-runtime-api/std",
+	"pallet-collective/std",
+	"pallet-elections-phragmen/std",
+	"pallet-election-provider-multi-phase/std",
+	"pallet-democracy/std",
+	"pallet-fast-unstake/std",
+	"pallet-grandpa/std",
+	"pallet-identity/std",
+	"pallet-im-online/std",
+	"pallet-indices/std",
+	"pallet-membership/std",
+	"pallet-multisig/std",
+	"pallet-nomination-pools/std",
+	"pallet-nomination-pools-runtime-api/std",
+	"pallet-offences/std",
+	"pallet-preimage/std",
+	"pallet-proxy/std",
+	"pallet-scheduler/std",
+	"pallet-session/std",
+	"pallet-staking/std",
+	"pallet-timestamp/std",
+	"pallet-treasury/std",
+	"pallet-tips/std",
+	"pallet-babe/std",
+	"pallet-vesting/std",
+	"pallet-utility/std",
+	"sp-runtime/std",
+	"sp-staking/std",
+	 "pallet-hotfix-sufficients/std",
+	"frame-system/std",
+	"frame-system-rpc-runtime-api/std",
+	"Peer_Runtime_constants/std",
+	"sp-version/std",
+	"serde_derive",
+	"serde/std",
+	"log/std",
+	"babe-primitives/std",
+	"sp-session/std",
+	"runtime-common/std",
+	"frame-try-runtime/std",
+	"sp-npos-elections/std",
+	"beefy-primitives/std",
+	"frame-election-provider-support/std",
+	"pallet-xcm/std",
+	"xcm/std",
+	"xcm-executor/std",
+	"xcm-builder/std",
+    "pallet-randomness-collective-flip/std",
+	"pallet-contracts/std",
+		"pallet-contracts-primitives/std",
+
+
+
+  #frontier
+	 "fp-rpc/std",
+     "fp-self-contained/std",
+      "pallet-base-fee/std",
+     "pallet-dynamic-fee/std",
+     "pallet-ethereum/std",
+	 "pallet-evm-precompile-modexp/std",
+     "pallet-evm/std",
+     "pallet-evm-precompile-simple/std",
+     "pallet-evm-precompile-sha3fips/std",
+	 "pallet-evm-precompile-simple/std",
+	 "pallet-evm-chain-id/std",
+
+
+]
+runtime-benchmarks = [
+	"runtime-common/runtime-benchmarks",
+	"frame-benchmarking/runtime-benchmarks",
+	"frame-support/runtime-benchmarks",
+	"frame-system/runtime-benchmarks",
+	"sp-runtime/runtime-benchmarks",
+	"pallet-babe/runtime-benchmarks",
+	"pallet-bags-list/runtime-benchmarks",
+	"pallet-balances/runtime-benchmarks",
+	"pallet-collective/runtime-benchmarks",
+	"pallet-democracy/runtime-benchmarks",
+	"pallet-elections-phragmen/runtime-benchmarks",
+	"pallet-election-provider-multi-phase/runtime-benchmarks",
+	"pallet-election-provider-support-benchmarking/runtime-benchmarks",
+	"pallet-fast-unstake/runtime-benchmarks",
+	"pallet-grandpa/runtime-benchmarks",
+	"pallet-identity/runtime-benchmarks",
+	"pallet-im-online/runtime-benchmarks",
+	"pallet-indices/runtime-benchmarks",
+	"pallet-membership/runtime-benchmarks",
+	"pallet-multisig/runtime-benchmarks",
+	"pallet-nomination-pools/runtime-benchmarks",
+	"pallet-nomination-pools-benchmarking/runtime-benchmarks",
+	"pallet-preimage/runtime-benchmarks",
+	"pallet-proxy/runtime-benchmarks",
+	"pallet-scheduler/runtime-benchmarks",
+	"pallet-staking/runtime-benchmarks",
+	"pallet-timestamp/runtime-benchmarks",
+	"pallet-treasury/runtime-benchmarks",
+	"pallet-bounties/runtime-benchmarks",
+	"pallet-child-bounties/runtime-benchmarks",
+	"pallet-tips/runtime-benchmarks",
+	"pallet-utility/runtime-benchmarks",
+	"pallet-vesting/runtime-benchmarks",
+	"pallet-xcm/runtime-benchmarks",
+	"pallet-offences-benchmarking/runtime-benchmarks",
+	"pallet-session-benchmarking/runtime-benchmarks",
+	"frame-system-benchmarking/runtime-benchmarks",
+	"hex-literal",
+	"xcm-builder/runtime-benchmarks",
+	"frame-election-provider-support/runtime-benchmarks",
+	"runtime-parachains/runtime-benchmarks", 
+"pallet-evm/runtime-benchmarks",
+	 "pallet-ethereum/runtime-benchmarks",
+    "pallet-evm/runtime-benchmarks",
+	"pallet-hotfix-sufficients/runtime-benchmarks",
+		"pallet-contracts/runtime-benchmarks",
+
+
+
+
+
+
+
+]
+try-runtime = [
+	"frame-executive/try-runtime",
+	"frame-try-runtime",
+	"frame-system/try-runtime",
+	"runtime-common/try-runtime",
+	"pallet-authority-discovery/try-runtime",
+	"pallet-authorship/try-runtime",
+	"pallet-balances/try-runtime",
+	"pallet-bags-list/try-runtime",
+	"pallet-bounties/try-runtime",
+	"pallet-child-bounties/try-runtime",
+	"pallet-transaction-payment/try-runtime",
+	"pallet-collective/try-runtime",
+	"pallet-elections-phragmen/try-runtime",
+	"pallet-election-provider-multi-phase/try-runtime",
+	"pallet-fast-unstake/try-runtime",
+	"pallet-democracy/try-runtime",
+	"pallet-grandpa/try-runtime",
+	"pallet-identity/try-runtime",
+	"pallet-im-online/try-runtime",
+	"pallet-indices/try-runtime",
+	"pallet-membership/try-runtime",
+	"pallet-multisig/try-runtime",
+	"pallet-nomination-pools/try-runtime",
+	"pallet-offences/try-runtime",
+	"pallet-preimage/try-runtime",
+	"pallet-proxy/try-runtime",
+	"pallet-scheduler/try-runtime",
+	"pallet-session/try-runtime",
+	"pallet-staking/try-runtime",
+	"pallet-timestamp/try-runtime",
+	"pallet-treasury/try-runtime",
+	"pallet-tips/try-runtime",
+	"pallet-babe/try-runtime",
+	"pallet-vesting/try-runtime",
+	"pallet-utility/try-runtime",
+	"pallet-xcm/try-runtime",
+		"pallet-randomness-collective-flip/try-runtime",
+			"pallet-contracts/try-runtime",
+
+
+]
+# When enabled, the runtime API will not be build.
+#
+# This is required by Cumulus to access certain types of the
+# runtime without clashing with the runtime API exported functions
+# in WASM.
+disable-runtime-api = []
+
+# A feature that should be enabled when the runtime should be build for on-chain
+# deployment. This will disable stuff that shouldn't be part of the on-chain wasm
+# to make it smaller like logging for example.
+on-chain-release-build = [
+	"sp-api/disable-logging",
+]
+
+# Set timing constants (e.g. session period) to faster versions to speed up testing.
+fast-runtime = []
+
+runtime-metrics = ["runtime-parachains/runtime-metrics", "sp-io/with-tracing"]

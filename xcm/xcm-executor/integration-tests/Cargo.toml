@@ -1,0 +1,30 @@
+[package]
+name = "xcm-executor-integration-tests"
+description = "Integration tests for the XCM Executor"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures = "0.3.21"
+pallet-xcm = { path = "../../pallet-xcm" }
+peer-test-client = { path = "../../../node/test/client" }
+peer-test-runtime = { path = "../../../runtime/test-runtime" }
+peer-test-service = { path = "../../../node/test/service" }
+sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-state-machine = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+xcm = { path = "../..", default-features = false }
+xcm-executor = { path = ".." }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+[features]
+default = ["std"]
+std = [
+	"xcm/std",
+	"sp-runtime/std",
+	"frame-support/std",
+]

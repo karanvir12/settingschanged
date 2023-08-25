@@ -1,0 +1,58 @@
+[package]
+name = "peer-rpc"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+jsonrpsee = { version = "0.16.2", features = ["server"] }
+futures = { version = "0.3.21", features = [ "compat" ] }
+peer-primitives = { path = "../primitives" }
+sc-client-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-chain-spec = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-babe = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-babe-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-consensus-epochs = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-finality-grandpa = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-finality-grandpa-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-sync-state-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-transaction-pool = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-service= { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+txpool-api = { package = "sc-transaction-pool-api", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-rpc-system = { package = "substrate-frame-rpc-system", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+mmr-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-transaction-payment-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-block-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+beefy-gadget = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+beefy-gadget-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+substrate-state-trie-migration-rpc = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+
+
+Peer-Runtime = { version = "3.0.0-dev", path = "../runtime/peer" }
+
+
+
+
+
+# Frontier
+fc-cli = { path = "../evm-client/cli" }
+fc-consensus = { path = "../evm-client/consensus" }
+fc-db = { path = "../evm-client/db" }
+fc-mapping-sync = { path = "../evm-client/mapping-sync" }
+fc-rpc = { path = "../evm-client/rpc" }
+fc-rpc-core = { path = "../evm-client/rpc-core" }
+fp-consensus = { path = "../evm-primitives/consensus" }
+fp-dynamic-fee = { path = "../evm-primitives/dynamic-fee" }
+fp-evm = { path = "../evm-primitives/evm" }
+fp-rpc = { path = "../evm-primitives/rpc" }
+fp-storage = { path = "../evm-primitives/storage" }
+

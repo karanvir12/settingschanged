@@ -1,0 +1,36 @@
+[package]
+name = "peer-dispute-distribution"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+futures-timer = "3.0.2"
+gum = { package = "tracing-gum", path = "../../gum" }
+derive_more = "0.99.17"
+parity-scale-codec = { version = "3.1.5", features = ["std"] }
+peer-primitives = { path = "../../../primitives" }
+peer-erasure-coding = { path = "../../../erasure-coding" }
+peer-node-subsystem = {path = "../../subsystem" }
+peer-node-network-protocol = { path = "../../network/protocol" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+peer-node-primitives = { path = "../../primitives" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+thiserror = "1.0.31"
+fatality = "0.0.6"
+lru = "0.8.0"
+indexmap = "1.9.1"
+
+[dev-dependencies]
+async-trait = "0.1.57"
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+futures-timer = "3.0.2"
+assert_matches = "1.4.0"
+lazy_static = "1.4.0"
+peer-primitives-test-helpers = { path = "../../../primitives/test-helpers" }

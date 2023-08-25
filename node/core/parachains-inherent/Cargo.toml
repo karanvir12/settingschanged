@@ -1,0 +1,18 @@
+[package]
+name = "peer-node-core-parachains-inherent"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+futures-timer = "3.0.2"
+gum = { package = "tracing-gum", path = "../../gum" }
+thiserror = "1.0.31"
+async-trait = "0.1.57"
+peer-node-subsystem = { path = "../../subsystem" }
+peer-overseer = { path = "../../overseer" }
+peer-primitives = { path = "../../../primitives" }
+sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-inherents = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }

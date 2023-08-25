@@ -1,0 +1,19 @@
+[package]
+name = "peer-node-core-bitfield-signing"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+futures = "0.3.21"
+gum = { package = "tracing-gum", path = "../../gum" }
+peer-primitives = { path = "../../../primitives" }
+peer-node-subsystem = { path = "../../subsystem" }
+peer-node-subsystem-util = { path = "../../subsystem-util" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+wasm-timer = "0.2.5"
+thiserror = "1.0.31"
+
+[dev-dependencies]
+peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
+test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }

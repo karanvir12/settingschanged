@@ -1,0 +1,13 @@
+[package]
+name = "peer-primitives-test-helpers"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-application-crypto = { package = "sp-application-crypto", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
+peer-primitives = { path = "../" }
+rand = "0.8.5"
