@@ -16,8 +16,8 @@ futures = "0.3.21"
 gum = { package = "tracing-gum", path = "../../gum" }
 
 [dev-dependencies]
-sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
+sp-authority-discovery = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "vne-mainnet" }
 
 peer-node-subsystem-util = { path = "../../subsystem-util" }
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }

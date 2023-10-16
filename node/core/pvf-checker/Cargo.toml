@@ -15,14 +15,14 @@ peer-primitives = { path = "../../../primitives" }
 peer-node-subsystem-util = { path = "../../subsystem-util" }
 peer-overseer = { path = "../../overseer" }
 
-sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 
 [dev-dependencies]
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sc-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sc-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers"}
 test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }
-sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 futures-timer = "3.0.2"

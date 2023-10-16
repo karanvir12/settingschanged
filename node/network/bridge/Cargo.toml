@@ -11,9 +11,9 @@ futures = "0.3.21"
 gum = { package = "tracing-gum", path = "../../gum" }
 peer-primitives = { path = "../../../primitives" }
 parity-scale-codec = { version = "3.1.5", default-features = false, features = ["derive"] }
-sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sc-network-common = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sc-network-common = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 peer-node-subsystem = {path = "../../subsystem" }
 peer-overseer = { path = "../../overseer" }
 peer-node-network-protocol = { path = "../protocol" }
@@ -26,7 +26,7 @@ thiserror = "1"
 [dev-dependencies]
 assert_matches = "1.4.0"
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 futures-timer = "3"
 peer-primitives-test-helpers = { path = "../../../primitives/test-helpers" }

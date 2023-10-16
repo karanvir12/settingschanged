@@ -10,21 +10,21 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 codec = { package = "parity-scale-codec", version = "3.0.0", default-features = false }
 scale-info = { version = "2.1.2", default-features = false, features = ["derive"] }
-frame-support = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-frame-system = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-sp-runtime = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-sp-std = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
+frame-support = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+frame-system = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+sp-runtime = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+sp-std = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
 xcm-executor = { path = "../xcm-executor", default-features = false }
-frame-benchmarking = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
+frame-benchmarking = { default-features = false, git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
 xcm = { path = "..", default-features = false }
 log = "0.4.17"
 
 [dev-dependencies]
-pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-pallet-assets = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
-sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "mainnet-peer" }
+pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+pallet-assets = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git" , branch = "vne-mainnet" }
 xcm-builder = { path = "../xcm-builder" }
 xcm = { path = ".." }
 # temp

@@ -14,10 +14,10 @@ ethereum-types = { version = "0.14.1", default-features = false }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 # Substrate
-sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
-sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
-sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet" }
+sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet" }
 # Frontier
 fc-db = { path = "../db" , default-features = false  }
 fp-rpc = { version = "3.0.0-dev", path = "../../evm-primitives/rpc", default-features = false   }
@@ -28,10 +28,10 @@ futures = "0.3.21"
 scale-codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false, features = ["derive"] }
 tempfile = "3.3.0"
 # Substrate
-sc-block-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sc-client-db = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer"  }
-substrate-test-runtime-client = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+sc-block-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sc-client-db = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-consensus = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet"  }
+substrate-test-runtime-client = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
 # Frontier
 Peer-Runtime = { version = "3.0.0-dev", path = "../../runtime/peer" }

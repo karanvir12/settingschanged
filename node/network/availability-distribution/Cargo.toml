@@ -14,8 +14,8 @@ peer-node-network-protocol = { path = "../../network/protocol" }
 peer-node-subsystem = { path = "../../subsystem" }
 peer-node-subsystem-util = { path = "../../subsystem-util" }
 peer-node-primitives = { path = "../../primitives" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
-sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "vne-mainnet" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 thiserror = "1.0.31"
 rand = "0.8.5"
 derive_more = "0.99.17"
@@ -24,10 +24,10 @@ fatality = "0.0.6"
 
 [dev-dependencies]
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "mainnet-peer" }
-sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", features = ["std"] , branch = "vne-mainnet" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sc-network = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 futures-timer = "3.0.2"
 assert_matches = "1.4.0"
 peer-primitives-test-helpers = { path = "../../../primitives/test-helpers" }

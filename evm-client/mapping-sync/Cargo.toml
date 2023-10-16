@@ -13,10 +13,10 @@ futures = "0.3.25"
 futures-timer = "3.0.1"
 log = "0.4.17"
 # Substrate
-sc-client-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
-sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+sc-client-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-api = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
+sp-blockchain = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
 # Frontier
 fc-db = { path = "../db" }
 fp-consensus = { version = "2.0.0-dev", path = "../../evm-primitives/consensus" ,default-features = false}

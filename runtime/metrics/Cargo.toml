@@ -5,8 +5,8 @@ authors.workspace = true
 edition.workspace = true
 
 [dependencies]
-sp-std = { package = "sp-std", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
-sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-std = { package = "sp-std", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
+sp-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet" }
 parity-scale-codec = { version = "3.1.5", default-features = false }
 primitives = { package = "peer-primitives", path = "../../primitives", default-features = false }
 

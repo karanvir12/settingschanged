@@ -9,9 +9,9 @@ edition.workspace = true
 codec = { package = "parity-scale-codec", version = "3.0.0" }
 paste = "1.0.7"
 
-frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 
 xcm = { path = "../" }
 xcm-executor = { path = "../xcm-executor" }

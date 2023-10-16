@@ -9,9 +9,9 @@ description = "Primitives for Frontier consensus."
 ethereum = { version = "0.14.0", default-features = false }
 scale-codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false, features = ["derive"] }
 # Substrate
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
 	
 [features]
 default = ["std"]

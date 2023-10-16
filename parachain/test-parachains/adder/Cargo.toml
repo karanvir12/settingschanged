@@ -9,15 +9,15 @@ authors.workspace = true
 [dependencies]
 parachain = { package = "peer-parachain", path = "../../", default-features = false, features = [ "wasm-api" ] }
 parity-scale-codec = { version = "3.1.5", default-features = false, features = ["derive"] }
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet" }
 tiny-keccak = { version = "2.0.2", features = ["keccak"] }
 dlmalloc = { version = "0.2.4", features = [ "global" ] }
 
 # We need to make sure the global allocator is disabled until we have support of full substrate externalities
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, features = [ "disable_allocator" ] , branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, features = [ "disable_allocator" ] , branch = "vne-mainnet" }
 
 [build-dependencies]
-substrate-wasm-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+substrate-wasm-builder = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 
 [features]
 default = [ "std" ]

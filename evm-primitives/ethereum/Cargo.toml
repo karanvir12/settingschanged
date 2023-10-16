@@ -14,8 +14,8 @@ ethereum-types = { version = "0.14.1", default-features = false }
 num_enum = { version = "0.5.4", default-features = false }
 scale-codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false, features = ["derive"] }
 # Substrate
-frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
 # Frontier
 fp-evm = { version = "3.0.0-dev", path = "../evm", default-features = false }
 

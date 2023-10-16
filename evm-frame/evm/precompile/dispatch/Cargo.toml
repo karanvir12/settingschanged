@@ -7,7 +7,7 @@ description = "DISPATCH precompiles for EVM pallet."
  
 [dependencies]
 # Substrate
-frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false  }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false  }
 # Frontier
 fp-evm = { version = "3.0.0-dev", path = "../../../../evm-primitives/evm", default-features = false }
 pallet-evm = {  path = "../..", default-features = false }
@@ -16,14 +16,14 @@ pallet-evm = {  path = "../..", default-features = false }
 scale-codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false, features = ["derive"] }
 scale-info = { version = "2.3.1", default-features = false, features = ["derive"] }
 # Substrate
-frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false  }
-pallet-timestamp = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
-pallet-balances ={ git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-pallet-utility = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" , default-features = false  }
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false  }
+pallet-timestamp = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
+pallet-balances ={ git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+pallet-utility = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" , default-features = false  }
 
 [features]
 default = ["std"]

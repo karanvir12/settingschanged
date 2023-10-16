@@ -25,20 +25,20 @@ peer-client = { path = "../node/client", optional = true }
 peer-node-core-pvf = { path = "../node/core/pvf", optional = true }
 peer-performance-test = { path = "../node/test/performance-test", optional = true }
 
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer"}
-sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-frame-benchmarking-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
-try-runtime-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
-sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
-sc-service = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet"}
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+frame-benchmarking-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "vne-mainnet" }
+try-runtime-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "vne-mainnet" }
+sc-cli = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "vne-mainnet" }
+sc-service = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "vne-mainnet" }
 peer-node-metrics = { path = "../node/metrics" }
-sc-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "mainnet-peer" }
-sc-sysinfo = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sc-executor = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sc-tracing = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", optional = true , branch = "vne-mainnet" }
+sc-sysinfo = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sc-executor = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 
 [build-dependencies]
-substrate-build-script-utils = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+substrate-build-script-utils = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 
 [features]
 default = ["db", "cli", "hostperfcheck", "full-node", "peer-native"]

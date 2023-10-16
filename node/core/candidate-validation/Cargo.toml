@@ -10,7 +10,7 @@ futures = "0.3.21"
 futures-timer = "3.0.2"
 gum = { package = "tracing-gum", path = "../../gum" }
 
-sp-maybe-compressed-blob = { package = "sp-maybe-compressed-blob", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-maybe-compressed-blob = { package = "sp-maybe-compressed-blob", git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 parity-scale-codec = { version = "3.1.5", default-features = false, features = ["bit-vec", "derive"] }
 
 peer-primitives = { path = "../../../primitives" }
@@ -23,9 +23,9 @@ peer-node-subsystem-util = { path = "../../subsystem-util" }
 peer-node-core-pvf = { path = "../pvf" }
 
 [dev-dependencies]
-sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-keyring = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 futures = { version = "0.3.21", features = ["thread-pool"] }
 assert_matches = "1.4.0"
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }

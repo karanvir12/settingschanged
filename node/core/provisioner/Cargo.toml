@@ -18,7 +18,7 @@ futures-timer = "3.0.2"
 fatality = "0.0.6"
 
 [dev-dependencies]
-sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
-sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+sp-application-crypto = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
+sp-keystore = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 peer-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
 test-helpers = { package = "peer-primitives-test-helpers", path = "../../../primitives/test-helpers" }

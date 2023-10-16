@@ -11,19 +11,19 @@ scale-info = { version = "2.1.2", default-features = false, features = ["derive"
 serde = { version = "1.0.137", optional = true, features = ["derive"] }
 log = { version = "0.4.17", default-features = false }
 
-sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
-sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
-sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
-frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
-frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "mainnet-peer" }
+sp-std = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
+sp-runtime = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
+sp-core = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
+frame-support = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
+frame-system = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false, branch = "vne-mainnet" }
 
 xcm = { path = "..", default-features = false }
 xcm-executor = { path = "../xcm-executor", default-features = false }
 
 [dev-dependencies]
-pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer" }
+pallet-balances = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet" }
 Peer-Runtime-parachains = { path = "../../runtime/parachains" }
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "mainnet-peer" }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", default-features = false , branch = "vne-mainnet" }
 xcm-builder = { path = "../xcm-builder" }
 peer-parachain = { path = "../../parachain" }
 

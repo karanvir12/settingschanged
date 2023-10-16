@@ -8,7 +8,7 @@ description = "Simple precompiles for EVM pallet."
 [dependencies]
 ripemd = { version = "0.1", default-features = false }
 # Substrate
-sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "mainnet-peer", default-features = false   }
+sp-io = { git = "ssh://git@github.com/PEER-Inc/peer-substrate.git", branch = "vne-mainnet", default-features = false   }
 # Frontier
 fp-evm = { version = "3.0.0-dev", path = "../../../../evm-primitives/evm", default-features = false }
 
